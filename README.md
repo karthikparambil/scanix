@@ -1,6 +1,6 @@
-<img src="https://github.com/karthikparambil/scanix/blob/main/assets/images/scanix-bgrm.png" width="350" alt="Project Logo" align="left"><br>
-
-
+<div align="center">
+<img src="https://github.com/karthikparambil/scanix/blob/main/assets/images/scanix-bgrm.png" width="350" alt="Project Logo" align="left">
+</div>
 ![Banner](https://img.shields.io/badge/Scanix-Automated%20Recon%20Suite-blue)
 ![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)
 
