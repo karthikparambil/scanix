@@ -3,10 +3,6 @@
 # Scanix 🔍
 
 **Automated Reconnaissance Suite for Penetration Testing**
-
-![Scanix Logo](images/scanix-logo.png)
-![Banner](https://img.shields.io/badge/Scanix-Automated%20Recon%20Suite-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)
 
 ## 🚀 Overview
