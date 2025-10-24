@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" width=100% >
 <img src="https://github.com/karthikparambil/scanix/blob/main/assets/images/scanix-bgrm.png" width="350" alt="Project Logo" align="left">
 </div>
 
