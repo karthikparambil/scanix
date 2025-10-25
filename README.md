@@ -136,9 +136,10 @@ This tool is for:
 - Unauthorized scanning may be illegal in your jurisdiction
 - Use responsibly and ethically
 
-### Contributing
+## 🤝 Contributing
 
-*Contributions are welcome! Please feel free to submit pull requests or open issues for:*
+*Contributions are welcome!*
+Please feel free to submit pull requests or open issues for:
 
   Bug fixes
 
