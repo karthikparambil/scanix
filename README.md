@@ -109,10 +109,20 @@ For each identified web service, the tool executes in sequence:
 The tool automatically organizes work across multiple terminals:
 
 
-| Terminal 1    |  | Terminal 2      |  | Terminal 3                          |
-|---------------|  |-----------------|  |-------------------------------------|
-| Service Scan  |  | Full Port Scan  |  | Directory Busting                   |
-|  nmap -sV     |  | nmap -p- → -A   |  |Feroxbuster + Nikto(per web port)    |
+| Terminal 1    |    
+|---------------|    
+| Service Scan  |    
+|  nmap -sV     |    
+
+| Terminal 2      |
+|-----------------|
+| Full Port Scan  |
+| nmap -p- → -A   |
+
+| Terminal 3                          |
+|-------------------------------------|
+| Directory Busting                   |
+|Feroxbuster + Nikto(per web port)    |
 
 ### Output Structure
 ```
