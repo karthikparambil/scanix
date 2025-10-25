@@ -130,28 +130,28 @@ pentest_192.168.1.100_20231201_143022/
 
 This tool is for:
 
-- Authorized penetration testing
-- Security research with permission
-- Educational purposes in controlled environments
-- Unauthorized scanning may be illegal in your jurisdiction
-- Use responsibly and ethically
+- **Authorized penetration testing**
+- **Security research with permission**
+- **Educational purposes in controlled environments**
+- **Unauthorized scanning may be illegal in your jurisdiction**
+- **Use responsibly and ethically**
 
 ## 🤝 Contributing
 
-*Contributions are welcome!*
+### *Contributions are welcome!*
 Please feel free to submit pull requests or open issues for:
 
-  Bug fixes
+- Bug fixes
+- New features
+- Documentation improvements
+- Performance enhancements
 
-  New features
+### 👨‍💻 Author: Karthik
 
-  Documentation improvements
+**GitHub: @karthikparambil**
 
-  Performance enhancements
-  
-### License
-
-MIT License - see LICENSE file for details.
+**Project: Scanix**
 
 ## ⭐ Star this repo if you find it useful!
 
+Disclaimer: This tool is for educational and authorized testing purposes only. The authors are not responsible for any misuse or damage caused by this program.
