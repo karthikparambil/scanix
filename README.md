@@ -29,17 +29,33 @@ Scanix is a powerful automation tool that streamlines the initial reconnaissance
 
 ## Features
 
-- **🔍 Parallel Scanning**: Simultaneous nmap scans for efficiency
-- **🌐 Smart Web Detection**: Auto-identifies HTTP/HTTPS services on any port
-- **📁 Sequential Directory Busting**: Feroxbuster + Nikto in organized workflow
-- **💾 Structured Output**: Timestamped, well-organized results
-- **🎯 Resource Optimized**: Prevents system overload with intelligent scheduling
+- ** Parallel Scanning**: Simultaneous nmap scans for efficiency
+- ** Smart Web Detection**: Auto-identifies HTTP/HTTPS services on any port
+- ** Sequential Directory Busting**: Feroxbuster + Nikto in organized workflow
+- ** Structured Output**: Timestamped, well-organized results
+- ** Resource Optimized**: Prevents system overload with intelligent scheduling
+
+
+## Prerequisites
+Required Tools
+
+Make sure the following tools are installed on your system:
+
+| Tools        | Purpose                                      | Installation |
+| -------------| ---------------------------------------------|--------------|
+| Nmap         | Network discovery and security auditing      | `sudo apt install nmap `
+| feroxbuster	 | Fast, recursive directory discovery          | `sudo apt install feroxbuster`
+| nikto        | Web vulnerability scanner                    | `sudo apt install nikto`
+| qterminal    | Terminal emulator for multi-window           | `sudo apt install qterminal`
+| seclists     | Collection of multiple security wordlists    | `sudo apt install seclists`
 
 ##  Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/karthikiyer/scanix.git
 cd scanix
+# Make the script executable
 chmod +x scanix.sh
 ```
 ## Dependencies
@@ -52,16 +68,42 @@ sudo apt install nmap feroxbuster nikto qterminal
 ./scanix.sh <TARGET_IP>
 ```
 Example:
-``
+```
 ./scanix.sh 192.168.1.100
-``<br>
-### Workflow
+```
+## Detailed Workflow
 
-Service Discovery - Nmap version detection
-Port Enumeration - Comprehensive TCP port scan
-Web Assessment - Auto directory busting on discovered web services
-Vulnerability Scanning - Nikto checks on web applications
+### Phase 1: Initial Setup
 
+    Validation: Checks for required tools and target IP
+
+    Directory Creation: Creates timestamped output directory
+
+    Tool Verification: Ensures all dependencies are installed
+
+### Phase 2: Parallel Scanning (Terminal 1 & 2)
+
+    Terminal 1: Service version detection (nmap -sV)
+
+    Terminal 2: Full port scan (nmap -p-) followed by aggressive scan on discovered ports
+
+### Phase 3: Web Service Detection & Enumeration
+
+    Automatic Detection: Identifies web services on common ports (80, 443, 8080, etc.)
+
+    Service Analysis: Checks service scan results for HTTP/HTTPS services
+
+    Non-Standard Ports: Detects web services on uncommon ports
+
+### Phase 4: Sequential Directory Busting
+
+For each identified web service, the tool executes in sequence:
+
+    Feroxbuster (Small): Quick scan with common wordlist
+
+    Feroxbuster (Large): Comprehensive scan with big wordlist
+
+    Nikto Scan: Web vulnerability assessment
 ### Output Structure
 ```
 pentest_192.168.1.100_20231201_143022/
@@ -72,11 +114,6 @@ pentest_192.168.1.100_20231201_143022/
 ├── ferox_large_80.txt
 └── nikto_80.txt
 ```
-### Terminal Layout
-
-Terminal 1: Service Version Scan
-Terminal 2: Full Port → Aggressive Scan
-Terminal 3+: Directory busting per web port
 
 ## ⚠️ Legal & Ethical Use
 
