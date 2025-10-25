@@ -36,7 +36,7 @@ Scanix is a powerful automation tool that streamlines the initial reconnaissance
 - **Resource Optimized**: Prevents system overload with intelligent scheduling
 
 
-## Prerequisites
+## Prerequisites -
 Required Tools
 
 Make sure the following tools are installed on your system:
@@ -75,35 +75,45 @@ Example:
 
 ### Phase 1: Initial Setup
 
-Validation: Checks for required tools and target IP
+**Validation:** Checks for required tools and target IP
 
-Directory Creation: Creates timestamped output directory
+**Directory Creation:** Creates timestamped output directory
 
-Tool Verification: Ensures all dependencies are installed
+**Tool Verification:** Ensures all dependencies are installed
 
 ### Phase 2: Parallel Scanning (Terminal 1 & 2)
 
-Terminal 1: Service version detection (nmap -sV)
+**Terminal 1:** Service version detection (nmap -sV)
 
-Terminal 2: Full port scan (nmap -p-) followed by aggressive scan on discovered ports
+**Terminal 2:** Full port scan (nmap -p-) followed by aggressive scan on discovered ports
 
 ### Phase 3: Web Service Detection & Enumeration
 
-Automatic Detection: Identifies web services on common ports (80, 443, 8080, etc.)
+**Automatic Detection:** Identifies web services on common ports (80, 443, 8080, etc.)
 
-Service Analysis: Checks service scan results for HTTP/HTTPS services
+**Service Analysis:** Checks service scan results for HTTP/HTTPS services
 
-Non-Standard Ports: Detects web services on uncommon ports
+**Non-Standard Ports:** Detects web services on uncommon ports
 
 ### Phase 4: Sequential Directory Busting
 
 For each identified web service, the tool executes in sequence:
 
-Feroxbuster (Small): Quick scan with common wordlist
+**Feroxbuster (Small):** Quick scan with common wordlist
 
-Feroxbuster (Large): Comprehensive scan with big wordlist
+**Feroxbuster (Large):** Comprehensive scan with big wordlist
 
-Nikto Scan: Web vulnerability assessment
+**Nikto Scan:** Web vulnerability assessment
+
+## Terminal Layout
+The tool automatically organizes work across multiple terminals:
+┌─────────────────┐  ┌──────────────────┐  ┌─────────────────────┐
+│ Terminal 1      │  │ Terminal 2       │  │ Terminal 3+         │
+│                 │  │                  │  │                     │
+│ Service Scan    │  │ Full Port Scan   │  │ Directory Busting   │
+│ nmap -sV        │  │ nmap -p- → -A    │  │ Feroxbuster + Nikto │
+│                 │  │                  │  │ (per web port)      │
+└─────────────────┘  └──────────────────┘  └─────────────────────┘
 
 ### Output Structure
 ```
@@ -120,14 +130,24 @@ pentest_192.168.1.100_20231201_143022/
 
 This tool is for:
 
-Authorized penetration testing
-Security research with permission
-Educational purposes in controlled environments
+- Authorized penetration testing
+- Security research with permission
+- Educational purposes in controlled environments
+- Unauthorized scanning may be illegal in your jurisdiction
+- Use responsibly and ethically
 
-Requires explicit permission before scanning any systems.
 ### Contributing
 
-Contributions welcome! Feel free to submit issues and pull requests.
+*Contributions are welcome! Please feel free to submit pull requests or open issues for:*
+
+  Bug fixes
+
+  New features
+
+  Documentation improvements
+
+  Performance enhancements
+  
 ### License
 
 MIT License - see LICENSE file for details.
