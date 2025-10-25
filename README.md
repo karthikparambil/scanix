@@ -29,11 +29,11 @@ Scanix is a powerful automation tool that streamlines the initial reconnaissance
 
 ## Features
 
-- ** Parallel Scanning**: Simultaneous nmap scans for efficiency
-- ** Smart Web Detection**: Auto-identifies HTTP/HTTPS services on any port
-- ** Sequential Directory Busting**: Feroxbuster + Nikto in organized workflow
-- ** Structured Output**: Timestamped, well-organized results
-- ** Resource Optimized**: Prevents system overload with intelligent scheduling
+- **Parallel Scanning**: Simultaneous nmap scans for efficiency
+- **Smart Web Detection**: Auto-identifies HTTP/HTTPS services on any port
+- **Sequential Directory Busting**: Feroxbuster + Nikto in organized workflow
+- **Structured Output**: Timestamped, well-organized results
+- **Resource Optimized**: Prevents system overload with intelligent scheduling
 
 
 ## Prerequisites
