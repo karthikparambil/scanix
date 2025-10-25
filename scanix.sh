@@ -2,8 +2,7 @@
 
 # ==============================================================================
 # Author: Karthik
-# GitHub: https://github.com/karthikiyer/scanix
-# License: MIT
+# GitHub: https://github.com/karthikparambil/scanix
 # Description: penetration testing automation tool with
 #              multi-threaded scanning, directory busting, and vulnerability
 #              detection capabilities.
