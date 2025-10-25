@@ -107,22 +107,15 @@ For each identified web service, the tool executes in sequence:
 
 ## Terminal Layout
 The tool automatically organizes work across multiple terminals:
-┌─────────────────────────────────────────────────────────────────┐
-│                           Terminal 1                            │
-│                      Service Scan (nmap -sV)                    │
-└─────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────┐
-│                           Terminal 2                            │
-│              Full Port Scan (nmap -p-) → Aggressive Scan        │
-└─────────────────────────────────────────────────────────────────┘
++-------------------+  +--------------------+  +----------------------+
+|   Terminal 1      |  |    Terminal 2      |  |     Terminal 3+      |
++-------------------+  +--------------------+  +----------------------+
+|  Service Scan     |  |  Full Port Scan    |  |  Directory Busting   |
+|   nmap -sV        |  |  nmap -p- → -A     |  | Feroxbuster + Nikto  |
+|                   |  |                    |  |   (per web port)     |
++-------------------+  +--------------------+  +----------------------+
 
-┌─────────────────────────────────────────────────────────────────┐
-│                          Terminal 3+                            │
-│         Sequential Directory Busting (per web port)             │
-│         1. Feroxbuster (small) → 2. Feroxbuster (large)         │
-│                      3. Nikto Vulnerability Scan                │
-└─────────────────────────────────────────────────────────────────┘
 ### Output Structure
 ```
 pentest_192.168.1.100_20231201_143022/
