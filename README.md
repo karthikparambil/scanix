@@ -75,35 +75,36 @@ Example:
 
 ### Phase 1: Initial Setup
 
-    Validation: Checks for required tools and target IP
+Validation: Checks for required tools and target IP
 
-    Directory Creation: Creates timestamped output directory
+Directory Creation: Creates timestamped output directory
 
-    Tool Verification: Ensures all dependencies are installed
+Tool Verification: Ensures all dependencies are installed
 
 ### Phase 2: Parallel Scanning (Terminal 1 & 2)
 
-    Terminal 1: Service version detection (nmap -sV)
+Terminal 1: Service version detection (nmap -sV)
 
-    Terminal 2: Full port scan (nmap -p-) followed by aggressive scan on discovered ports
+Terminal 2: Full port scan (nmap -p-) followed by aggressive scan on discovered ports
 
 ### Phase 3: Web Service Detection & Enumeration
 
-    Automatic Detection: Identifies web services on common ports (80, 443, 8080, etc.)
+Automatic Detection: Identifies web services on common ports (80, 443, 8080, etc.)
 
-    Service Analysis: Checks service scan results for HTTP/HTTPS services
+Service Analysis: Checks service scan results for HTTP/HTTPS services
 
-    Non-Standard Ports: Detects web services on uncommon ports
+Non-Standard Ports: Detects web services on uncommon ports
 
 ### Phase 4: Sequential Directory Busting
 
 For each identified web service, the tool executes in sequence:
 
-    Feroxbuster (Small): Quick scan with common wordlist
+Feroxbuster (Small): Quick scan with common wordlist
 
-    Feroxbuster (Large): Comprehensive scan with big wordlist
+Feroxbuster (Large): Comprehensive scan with big wordlist
 
-    Nikto Scan: Web vulnerability assessment
+Nikto Scan: Web vulnerability assessment
+
 ### Output Structure
 ```
 pentest_192.168.1.100_20231201_143022/
