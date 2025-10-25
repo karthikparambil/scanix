@@ -111,10 +111,16 @@ The tool automatically organizes work across multiple terminals:
 +-------------------+  +--------------------+  +----------------------+
 |   Terminal 1      |  |    Terminal 2      |  |     Terminal 3+      |
 +-------------------+  +--------------------+  +----------------------+
-|  Service Scan     |  |  Full Port Scan    |  |  Directory Busting   |
-|   nmap -sV        |  |  nmap -p- → -A     |  | Feroxbuster + Nikto  |
+|       |  |  Full Port Scan    |  |  Directory Busting   |
+|           |  |  nmap -p- → -A     |  | Feroxbuster + Nikto  |
 |                   |  |                    |  |   (per web port)     |
 +-------------------+  +--------------------+  +----------------------+
+
+| Terminal 1    |
+|---------------|
+| Service Scan  |
+|  nmap -sV     |
+|               |
 
 ### Output Structure
 ```
