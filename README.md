@@ -12,14 +12,6 @@
 **Automated Reconnaissance Suite for Penetration Testing**
 
 </div>
----
-
-
-
-
-
-
-
 
 
 ## Overview
@@ -108,10 +100,10 @@ For each identified web service, the tool executes in sequence:
 The tool automatically organizes work across multiple terminals:
 
 
-| Terminal 1    |    
-|---------------|    
-| Service Scan  |    
-|  nmap -sV     |    
+| Terminal 1      |    
+|-----------------|    
+| Service Scan    |    
+|  nmap -sV       |    
 
 | Terminal 2      |
 |-----------------|
